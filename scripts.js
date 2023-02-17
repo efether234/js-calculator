@@ -12,15 +12,15 @@ display.textContent = displayText;
  * button text.
  */
 
-const keyboard = document.querySelector("#keys"); // Get keys parent element from document
-const multOptions = document.querySelector("#multipliers"); // Get multipliers parent element
+const numbers = document.querySelector("#numbers"); // Get keys parent element from document
+const percentages = document.querySelector("#percentages"); // Get multipliers parent element
 
 for (let i = 0; i < 10; i++) {
-  const newKey = document.createElement("button"); // Create the key element
-  newKey.setAttribute("class", "key"); // Set the new key's class to .key
-  newKey.setAttribute("value", `${i}`); // Set the value for the button to i
-  newKey.textContent = i; // Set text of the button to i
-  keyboard.append(newKey); // Append the new key to the keys parent element
+  const newNum = document.createElement("button"); // Create the key element
+  newNum.setAttribute("class", "key"); // Set the new key's class to .key
+  newNum.setAttribute("value", `${i}`); // Set the value for the button to i
+  newNum.textContent = i; // Set text of the button to i
+  numbers.append(newNum); // Append the new key to the keys parent element
 }
 
 /**
@@ -43,11 +43,11 @@ keys.forEach((key) => {
  * Create keys for all the multipliers
  */
 
-const multipliers = [0.15, 0.18, 0.2, 0.22]; // common tipping percentages
-multipliers.forEach((multiplier) => {
-  const newMultiplier = document.createElement("button");
-  newMultiplier.setAttribute("class", "key");
-  newMultiplier.setAttribute("value", `${multiplier}`);
-  newMultiplier.textContent = multiplier;
-  multOptions.append(newMultiplier);
+const tipOptions = [0.15, 0.18, 0.2, 0.22]; // common tipping percentages
+tipOptions.forEach((percentage) => {
+  const newPercentage = document.createElement("button");
+  newPercentage.setAttribute("class", "key");
+  newPercentage.setAttribute("value", `${percentage}`);
+  newPercentage.textContent = percentage;
+  percentages.append(newPercentage);
 });
